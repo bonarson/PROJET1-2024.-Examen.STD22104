@@ -18,6 +18,12 @@ public class AffirmationEvaluatorTest {
                 evaluator.getAffirmation("affirmation_1"),
                 "et"
         ));
+
+        evaluator.addAffirmation("louEstBeauDoncLouEstPauvre", new CompositeAffirmation(
+                evaluator.getAffirmation("vérité_1"),
+                evaluator.getAffirmation("mensonge_1"),
+                "donc"
+        ));
     }
 
 }
