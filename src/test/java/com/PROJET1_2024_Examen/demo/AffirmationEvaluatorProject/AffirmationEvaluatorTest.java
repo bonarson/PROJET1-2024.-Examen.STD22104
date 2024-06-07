@@ -64,4 +64,9 @@ public class AffirmationEvaluatorTest {
     void testLouEstBeauOuLouEstGénéreuxDoncLouEstPauvre() {
         assertEquals("faux", evaluator.evaluate("louEstBeauOuLouEstGénéreuxDoncLouEstPauvre"));
     }
+
+    @Test
+    void testAffirmationInconnue() {
+        assertEquals("jenesaispas", evaluator.evaluate("affirmationInconnue"));
+    }
 }
