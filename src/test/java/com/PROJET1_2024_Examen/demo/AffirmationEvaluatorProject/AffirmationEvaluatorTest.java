@@ -31,7 +31,15 @@ public class AffirmationEvaluatorTest {
                 "donc"
         ));
 
-
+        evaluator.addAffirmation("louEstBeauOuLouEstGénéreuxDoncLouEstPauvre", new CompositeAffirmation(
+                new CompositeAffirmation(
+                        evaluator.getAffirmation("vérité_1"),
+                        evaluator.getAffirmation("affirmation_1"),
+                        "ou"
+                ),
+                evaluator.getAffirmation("mensonge_1"),
+                "donc"
+        ));
     }
 
 }
