@@ -24,6 +24,14 @@ public class AffirmationEvaluatorTest {
                 evaluator.getAffirmation("mensonge_1"),
                 "donc"
         ));
+
+        evaluator.addAffirmation("louEstPauvreDoncLouEstGénéreux", new CompositeAffirmation(
+                evaluator.getAffirmation("mensonge_1"),
+                evaluator.getAffirmation("affirmation_1"),
+                "donc"
+        ));
+
+
     }
 
 }
