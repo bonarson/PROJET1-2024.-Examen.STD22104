@@ -1,6 +1,9 @@
 package com.PROJET1_2024_Examen.demo.AffirmationEvaluatorProject;
 
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class AffirmationEvaluatorTest {
     private AffirmationEvaluator evaluator;
@@ -40,6 +43,11 @@ public class AffirmationEvaluatorTest {
                 evaluator.getAffirmation("mensonge_1"),
                 "donc"
         ));
+    }
+
+    @Test
+    void testLouEstPauvreEtLouEstGénéreux() {
+        assertEquals("faux", evaluator.evaluate("louEstPauvreEtLouEstGénéreux"));
     }
 
 }
