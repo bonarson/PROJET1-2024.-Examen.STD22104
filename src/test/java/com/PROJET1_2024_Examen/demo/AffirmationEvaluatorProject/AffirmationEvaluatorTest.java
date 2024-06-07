@@ -12,6 +12,12 @@ public class AffirmationEvaluatorTest {
         evaluator.addAffirmation("vérité_1", new SimpleAffirmation(true));
         evaluator.addAffirmation("mensonge_1", new SimpleAffirmation(false));
         evaluator.addAffirmation("affirmation_1", new SimpleAffirmation(false));
+
+        evaluator.addAffirmation("louEstPauvreEtLouEstGénéreux", new CompositeAffirmation(
+                evaluator.getAffirmation("mensonge_1"),
+                evaluator.getAffirmation("affirmation_1"),
+                "et"
+        ));
     }
 
 }
