@@ -1,4 +1,16 @@
 package com.PROJET1_2024_Examen.demo.AffirmationEvaluatorProject;
 
-public class SimpleAffirmation {
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+
+@RequiredArgsConstructor
+@Getter
+public final class SimpleAffirmation extends Affirmation {
+
+    private final boolean value;
+
+    @Override
+    boolean evaluate() {
+        return value;
+    }
 }
